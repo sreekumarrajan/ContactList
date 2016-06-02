@@ -1,0 +1,38 @@
+
+<div class="container">
+  <div class="spacer">
+
+  </div>
+  <div class="row" ng-if="vm.data.length !== 0">
+    <div class="col col-md-2">
+      <span>Name</span>
+    </div>
+    <div class="col col-md-offset-1 col-md-1">
+      <span>Actions</span>
+    </div>
+  </div>
+  <div class="spacer">
+
+  </div>
+  <div ng-repeat="entry in vm.data | filter:vm.search">
+  <div class="row">
+    <div class="col col-md-2 name_box">
+      <span>{{entry.name}}</span>
+    </div>
+    <div class="col col-md-2 col-md-offset-1">
+      <span class="glyphicon glyphicon-eye-open" uib-tooltip ="View"
+        ng-click="vm.view(vm.data[$index])"
+      ></span>
+      <span class="glyphicon glyphicon-edit" uib-tooltip ="Edit"
+        ng-click="vm.edit(vm.data[$index])"
+      ></span>
+        <span class="glyphicon glyphicon-trash" uib-tooltip ="Delete"
+          ng-click="vm.delete(vm.data[$index].id)"
+        ></span>
+    </div>
+  </div>
+  <div class="small_spacer">
+
+  </div>
+  </div>
+</div>

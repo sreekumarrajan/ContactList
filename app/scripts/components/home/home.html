@@ -1,0 +1,6 @@
+<cl-options on-contact-added="home.onContactAdded(contact)" on-search-text-changed="home.onSearchTextChanged(newValue)">
+</cl-options>
+
+<cl-list-view data="home.contactList" on-contact-edited="home.onContactEdited(contact)"
+  on-contact-delete="home.onContactDelete(id)" search="home.search"
+></cl-list-view>
